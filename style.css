@@ -1,0 +1,290 @@
+/* ================= GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #05070f;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+}
+
+section {
+  position: relative;
+  z-index: 2;
+}
+
+/* ================= HERO ================= */
+#hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.25;
+}
+
+.hero-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: #00eaff;
+  text-shadow: 0 0 20px rgba(0,234,255,0.6);
+}
+
+.hero-content p {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+  padding: 14px 34px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: 0.3s;
+  border: 1px solid transparent;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #00eaff, #0077ff);
+  color: #000;
+  box-shadow: 0 0 20px rgba(0,234,255,0.5);
+}
+
+.btn.primary:hover {
+  transform: scale(1.05);
+}
+
+.btn.secondary {
+  border: 1px solid #00eaff;
+  color: #00eaff;
+}
+
+.btn.secondary:hover {
+  background: #00eaff;
+  color: #000;
+}
+
+/* ================= LIVE OFFER ================= */
+.live-offer {
+  padding: 50px 20px;
+  text-align: center;
+  background: radial-gradient(circle at top, #0c1c2b, #05070f);
+}
+
+#timer {
+  font-size: 2rem;
+  color: #00eaff;
+  margin-top: 10px;
+  text-shadow: 0 0 15px rgba(0,234,255,0.7);
+}
+
+/* ================= SECTIONS ================= */
+.section {
+  padding: 90px 10%;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #00eaff;
+}
+
+.dark {
+  background: #03050c;
+}
+
+/* ================= FILTER BUTTONS ================= */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.filter-buttons button {
+  padding: 10px 24px;
+  background: transparent;
+  border: 1px solid #00eaff;
+  color: #00eaff;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.filter-buttons button:hover {
+  background: #00eaff;
+  color: #000;
+}
+
+/* ================= PRODUCTS ================= */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+}
+
+.product-card {
+  background: linear-gradient(180deg, #0b1224, #05070f);
+  border-radius: 18px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0,234,255,0.08);
+  transition: 0.4s;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 0 40px rgba(0,234,255,0.4);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 20px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.new-price {
+  color: #00eaff;
+  font-size: 1.4rem;
+  margin: 8px 0;
+}
+
+/* ================= BUY BUTTON ================= */
+.buy-btn {
+  margin-top: 15px;
+  padding: 12px;
+  width: 100%;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(135deg, #00eaff, #0077ff);
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.buy-btn:hover {
+  transform: scale(1.05);
+}
+
+/* ================= SINGLE PRODUCT ================= */
+.single-product {
+  max-width: 420px;
+  margin: auto;
+  text-align: center;
+  background: #0b1224;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.single-product img {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 20px;
+}
+
+/* ================= WHY US ================= */
+.why-us {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 80px 10%;
+  flex-wrap: wrap;
+}
+
+.why-box {
+  text-align: center;
+}
+
+.why-box i {
+  font-size: 2.5rem;
+  color: #00eaff;
+  margin-bottom: 10px;
+}
+
+/* ================= FEEDBACK ================= */
+.feedback {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.feedback p {
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+/* ================= CONTACT ================= */
+.contact {
+  padding: 80px 20px;
+  text-align: center;
+  background: #03050c;
+}
+
+.contact p {
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+/* ================= WHATSAPP ================= */
+.floating-whatsapp {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #25D366;
+  color: #fff;
+  font-size: 26px;
+  padding: 16px;
+  border-radius: 50%;
+  z-index: 99;
+  box-shadow: 0 0 20px rgba(37,211,102,0.6);
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .section {
+    padding: 70px 6%;
+  }
+}
+
